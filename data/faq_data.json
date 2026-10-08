@@ -1,0 +1,612 @@
+[
+  {
+    "id": "faq_01",
+    "category": "Timetable",
+    "question": "What is today's timetable?",
+    "patterns": [
+      "What is today's timetable?",
+      "Today's class schedule",
+      "What classes do I have today?",
+      "Show me today's timetable",
+      "Which periods are scheduled today?",
+      "Schedule for today",
+      "Classes today"
+    ],
+    "dynamic_handler": "today_schedule",
+    "answer": "Here is today's schedule for your selected semester and section. You can also view the full breakdown in the 'Today's Schedule' panel on your dashboard.",
+    "related_questions": [
+      "What classes do I have tomorrow?",
+      "What is the lunch break timing?",
+      "Which subject is scheduled in the third period?"
+    ]
+  },
+  {
+    "id": "faq_02",
+    "category": "Timetable",
+    "question": "What classes do I have tomorrow?",
+    "patterns": [
+      "What classes do I have tomorrow?",
+      "Tomorrow's timetable",
+      "Schedule for tomorrow",
+      "Are there classes tomorrow?",
+      "What is scheduled tomorrow?",
+      "What periods do we have tomorrow?"
+    ],
+    "dynamic_handler": "tomorrow_schedule",
+    "answer": "Here is tomorrow's schedule for your selected semester and section. Make sure to check your lab requirements and lecture materials beforehand.",
+    "related_questions": [
+      "What is today's timetable?",
+      "Is Saturday a working day?",
+      "Which subject is scheduled in the third period?"
+    ]
+  },
+  {
+    "id": "faq_03",
+    "category": "Calendar",
+    "question": "When does the semester begin?",
+    "patterns": [
+      "When does the semester begin?",
+      "When did college start?",
+      "Semester commencement date",
+      "Start date of current semester",
+      "When do classes commence?",
+      "Beginning of semester"
+    ],
+    "answer": "The current odd semester commenced on **10 August 2026** with student orientation and induction programs. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When is the last working day?",
+      "When does the next semester start?",
+      "What is the academic calendar?"
+    ]
+  },
+  {
+    "id": "faq_04",
+    "category": "Calendar",
+    "question": "When is the last working day?",
+    "patterns": [
+      "When is the last working day?",
+      "Last day of classes",
+      "When does teaching end?",
+      "End of semester classes",
+      "Last instructional day",
+      "When do regular classes conclude?"
+    ],
+    "dynamic_handler": "last_working_day",
+    "answer": "The official last working day for this semester is **24 October 2026**. After this date, all teaching ceases and attendance registers are frozen for exam eligibility. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When is study holiday?",
+      "When are semester exams?",
+      "How many days until semester exams?"
+    ]
+  },
+  {
+    "id": "faq_05",
+    "category": "Exams",
+    "question": "When are internal exams?",
+    "patterns": [
+      "When are internal exams?",
+      "Internal assessment dates",
+      "When is IAT-2?",
+      "When is midterm examination?",
+      "Internal exam schedule",
+      "Dates for internal assessment tests"
+    ],
+    "dynamic_handler": "internal_exams",
+    "answer": "Internal Assessment Test II (IAT-2) is scheduled to commence on **12 October 2026** (covering Units 3 & 4). IAT-1 was held earlier on 7 September 2026. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "Is there any exam this week?",
+      "Are there classes after internal exams?",
+      "When are practical exams?"
+    ]
+  },
+  {
+    "id": "faq_06",
+    "category": "Exams",
+    "question": "When are semester exams?",
+    "patterns": [
+      "When are semester exams?",
+      "Semester examination date",
+      "When do university final exams start?",
+      "End semester theory exam schedule",
+      "Final exams date",
+      "When do terminal theory exams begin?"
+    ],
+    "dynamic_handler": "semester_exams",
+    "answer": "The End Semester University Theory Examinations are scheduled to commence on **2 November 2026** and will conclude on **18 November 2026**. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "How many days until semester exams?",
+      "When is study holiday?",
+      "When are practical exams?"
+    ]
+  },
+  {
+    "id": "faq_07",
+    "category": "Holidays",
+    "question": "When is the next holiday?",
+    "patterns": [
+      "When is the next holiday?",
+      "Next upcoming holiday",
+      "Is there any holiday coming up?",
+      "When is college closed next?",
+      "Upcoming public holiday",
+      "Next day off"
+    ],
+    "dynamic_handler": "next_holiday",
+    "answer": "The next scheduled college holiday is **Dussehra / Autumn Break on 15 October 2026**. Regular classes resume on 16 October 2026. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "Is Saturday a working day?",
+      "When is the next working Saturday?",
+      "What are this month's important dates?"
+    ]
+  },
+  {
+    "id": "faq_08",
+    "category": "Calendar",
+    "question": "Is Saturday a working day?",
+    "patterns": [
+      "Is Saturday a working day?",
+      "Do we have college on Saturday?",
+      "Are Saturdays working days?",
+      "Is this Saturday off?",
+      "Saturday college policy",
+      "Do we have classes on Saturdays?"
+    ],
+    "answer": "As per college academic regulations:\n• **1st and 3rd Saturdays** are instructional working days (compensatory classes following designated weekday timetables).\n• **2nd and 4th Saturdays** and all **Sundays** are official college holidays. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When is the next working Saturday?",
+      "What are this month's important dates?",
+      "Are laboratory sessions conducted on Saturday?"
+    ]
+  },
+  {
+    "id": "faq_09",
+    "category": "Calendar",
+    "question": "When does the college reopen?",
+    "patterns": [
+      "When does the college reopen?",
+      "Reopening date",
+      "When does next semester start?",
+      "When does college open after exams?",
+      "Even semester reopening date",
+      "When do we return to college?"
+    ],
+    "answer": "The college will reopen for the Even Semester (Spring 2027) on **1 December 2026**. Course registration and subject allocation will open on the same day. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When does semester break begin?",
+      "When are semester exams?",
+      "When is the last working day?"
+    ]
+  },
+  {
+    "id": "faq_10",
+    "category": "Exams",
+    "question": "When are practical exams?",
+    "patterns": [
+      "When are practical exams?",
+      "Lab exam dates",
+      "When is the practical examination?",
+      "Lab viva and practical dates",
+      "End semester lab exams",
+      "When are practical evaluations scheduled?"
+    ],
+    "answer": "End Semester Practical & Laboratory Examinations will be held from **20 October 2026 to 23 October 2026**. Batch-wise lab schedules and external examiner rosters are published on the department notice board. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When are internal exams?",
+      "When is study holiday?",
+      "When are semester exams?"
+    ]
+  },
+  {
+    "id": "faq_11",
+    "category": "Calendar",
+    "question": "When is study holiday?",
+    "patterns": [
+      "When is study holiday?",
+      "Study leave dates",
+      "When do preparatory study holidays begin?",
+      "Study break before semester exams",
+      "How long is study holiday?",
+      "Preparatory study holidays"
+    ],
+    "answer": "Preparatory Study Holidays commence on **25 October 2026** and extend through **1 November 2026** (8 days). The college central library and study halls remain open 24x7 during this period. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When are semester exams?",
+      "When is the last working day?",
+      "How many days until semester exams?"
+    ]
+  },
+  {
+    "id": "faq_12",
+    "category": "Timings",
+    "question": "What is the lunch break timing?",
+    "patterns": [
+      "What is the lunch break timing?",
+      "When is lunch break?",
+      "Lunch hour timing",
+      "What time is lunch?",
+      "How long is the lunch break?",
+      "Afternoon lunch timings"
+    ],
+    "answer": "The official lunch break is from **12:15 PM to 01:00 PM** (45 minutes duration) every regular instructional day. The college food court and mess operate throughout this window.",
+    "related_questions": [
+      "What are the morning break timings?",
+      "What time does the first class begin?",
+      "When does the last class end?"
+    ]
+  },
+  {
+    "id": "faq_13",
+    "category": "Timings",
+    "question": "What time does the first class begin?",
+    "patterns": [
+      "What time does the first class begin?",
+      "When does period 1 start?",
+      "College start time",
+      "First period time",
+      "Morning class beginning time",
+      "What time do classes start in the morning?"
+    ],
+    "answer": "The first instructional period begins sharply at **09:00 AM**. Students are expected to report to their designated lecture halls or labs by 08:55 AM for morning attendance.",
+    "related_questions": [
+      "When does the last class end?",
+      "What is the lunch break timing?",
+      "What are the morning break timings?"
+    ]
+  },
+  {
+    "id": "faq_14",
+    "category": "Timings",
+    "question": "When does the last class end?",
+    "patterns": [
+      "When does the last class end?",
+      "College closing time",
+      "When does the 6th period conclude?",
+      "What time does college finish?",
+      "End of day timing",
+      "When does college get over?"
+    ],
+    "answer": "The final instructional period (Period 6) concludes at **04:00 PM** on weekdays (Monday through Friday). On working Saturdays, classes end at 02:00 PM following special half-day tutorial schedules.",
+    "related_questions": [
+      "What time does the first class begin?",
+      "What is the lunch break timing?",
+      "Is Saturday a working day?"
+    ]
+  },
+  {
+    "id": "faq_15",
+    "category": "Exams",
+    "question": "Is there any exam this week?",
+    "patterns": [
+      "Is there any exam this week?",
+      "Do we have any tests this week?",
+      "Are there examinations this week?",
+      "Any exams scheduled for this week?",
+      "Exam this week"
+    ],
+    "dynamic_handler": "exam_this_week",
+    "answer": "Please check your academic calendar timeline:\n• For the current week of October, **Internal Assessment Test II (IAT-2)** begins next Monday on **12 October 2026**.\n• No university theory exams are scheduled for this immediate week. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When are internal exams?",
+      "When are practical exams?",
+      "Upcoming academic events"
+    ]
+  },
+  {
+    "id": "faq_16",
+    "category": "Calendar",
+    "question": "What is the academic calendar?",
+    "patterns": [
+      "What is the academic calendar?",
+      "Show academic calendar",
+      "Academic schedule overview",
+      "Semester timeline and milestones",
+      "College calendar dates",
+      "Full academic year calendar"
+    ],
+    "answer": "The academic calendar outlines all official semester milestones:\n• **Commencement:** 10 August 2026\n• **IAT-1:** 7 September 2026\n• **IAT-2:** 12 October 2026\n• **Practical Exams:** 20–23 October 2026\n• **Last Working Day:** 24 October 2026\n• **Study Holidays:** 25 Oct – 1 Nov 2026\n• **Semester Theory Exams:** 2–18 November 2026\n• **Vacation:** 19–30 November 2026\n• **Reopening:** 1 December 2026\n*(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "What are this month's important dates?",
+      "What is the next academic event?",
+      "When is the next holiday?"
+    ]
+  },
+  {
+    "id": "faq_17",
+    "category": "Academic Policies",
+    "question": "Are there classes after internal exams?",
+    "patterns": [
+      "Are there classes after internal exams?",
+      "Do classes resume after IAT?",
+      "Is there teaching after internal assessments?",
+      "Classes after internal tests",
+      "Post exam class schedule"
+    ],
+    "answer": "Yes. Following the completion of IAT-2 on 14 October, regular classes resume from 16 October through **24 October 2026** (the official Last Working Day) for syllabus completion, revision, and lab practical mock tests. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When is the last working day?",
+      "When are practical exams?",
+      "When is study holiday?"
+    ]
+  },
+  {
+    "id": "faq_18",
+    "category": "Calendar",
+    "question": "When does semester break begin?",
+    "patterns": [
+      "When does semester break begin?",
+      "Semester vacation dates",
+      "When do holidays start after semester exams?",
+      "Term break dates",
+      "When is winter vacation?"
+    ],
+    "answer": "The semester vacation begins on **19 November 2026**, immediately following the conclusion of university theory examinations, and lasts until **30 November 2026**. College reopens on 1 December 2026. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "When does the college reopen?",
+      "When are semester exams?",
+      "When is the last working day?"
+    ]
+  },
+  {
+    "id": "faq_19",
+    "category": "Timeline",
+    "question": "When is the next academic event?",
+    "patterns": [
+      "When is the next academic event?",
+      "What is the next academic event?",
+      "What is coming up next?",
+      "Next upcoming academic event",
+      "Upcoming milestones on calendar",
+      "What event is coming up?",
+      "Next event on schedule"
+    ],
+    "dynamic_handler": "next_event",
+    "answer": "Upcoming on the academic timeline:\n• **Internal Assessment Test II (IAT-2)** on **12 October 2026** (4 days remaining)\nFollowed by:\n• **Dussehra Holiday** on **15 October 2026** (7 days remaining)\n• **Practical Exams** on **20 October 2026** (12 days remaining)\n• **Semester Theory Exams** on **2 November 2026** (25 days remaining). *(Demo academic data)*",
+    "related_questions": [
+      "How many days until semester exams?",
+      "When are internal exams?",
+      "What are this month's important dates?"
+    ]
+  },
+  {
+    "id": "faq_20",
+    "category": "Calendar",
+    "question": "When is the next working Saturday?",
+    "patterns": [
+      "When is the next working Saturday?",
+      "Next working Saturday date",
+      "Which Saturday is a working day?",
+      "Upcoming working Saturday",
+      "Do we have working Saturday this month?"
+    ],
+    "answer": "The next scheduled working Saturday is **17 October 2026** (the 3rd Saturday of October). It will operate on a special compensatory Tuesday timetable. *(Demo academic data used for project purposes)*",
+    "related_questions": [
+      "Is Saturday a working day?",
+      "When is the next holiday?",
+      "What are this month's important dates?"
+    ]
+  },
+  {
+    "id": "faq_21",
+    "category": "Calendar",
+    "question": "What are this month's important dates?",
+    "patterns": [
+      "What are this month's important dates?",
+      "Important dates in October",
+      "Key dates this month",
+      "Monthly schedule highlights",
+      "October academic calendar dates"
+    ],
+    "answer": "Key milestones for **October 2026**:\n• **12 Oct:** Internal Assessment Test II (IAT-2)\n• **15 Oct:** Dussehra Holiday\n• **17 Oct:** Working Saturday (Tuesday schedule)\n• **19 Oct:** MCA TechSymposium & Project Expo\n• **20–23 Oct:** End Semester Practical Examinations\n• **24 Oct:** Last Working Day\n• **25 Oct:** Study Holidays Begin\n*(Demo academic data)*",
+    "related_questions": [
+      "When is the next academic event?",
+      "When are internal exams?",
+      "When is study holiday?"
+    ]
+  },
+  {
+    "id": "faq_22",
+    "category": "Timetable",
+    "question": "Which subject is scheduled in the third period?",
+    "patterns": [
+      "Which subject is scheduled in the third period?",
+      "What class is in period 3?",
+      "Third period subject",
+      "Subject in period 3 today",
+      "What do we have at 11:15 AM?"
+    ],
+    "dynamic_handler": "third_period",
+    "answer": "Period 3 runs from **11:15 AM to 12:15 PM** immediately after the morning tea recess. The exact subject depends on your selected semester and weekday in your schedule.",
+    "related_questions": [
+      "What is today's timetable?",
+      "What are the morning break timings?",
+      "What is the lunch break timing?"
+    ]
+  },
+  {
+    "id": "faq_23",
+    "category": "Timetable",
+    "question": "Is there any timetable change today?",
+    "patterns": [
+      "Is there any timetable change today?",
+      "Timetable change notice",
+      "Are there any swapped classes today?",
+      "Has the schedule changed?",
+      "Any altered timings today?",
+      "Timetable change"
+    ],
+    "answer": "No general timetable revisions have been issued for today. All classes are proceeding according to the standard master timetable for your respective section. Any emergency faculty substitutions are posted on the Department Digital Notice Board.",
+    "related_questions": [
+      "What is today's timetable?",
+      "How to check for timetable conflicts?",
+      "What classes do I have tomorrow?"
+    ]
+  },
+  {
+    "id": "faq_24",
+    "category": "Calendar",
+    "question": "When does the next semester start?",
+    "patterns": [
+      "When does the next semester start?",
+      "Next semester start date",
+      "When do even semester classes begin?",
+      "Beginning of next term",
+      "Next semester reopening"
+    ],
+    "answer": "The upcoming Even Semester (Spring 2027) commences on **1 December 2026**. Classroom allocations, faculty mentors, and course syllabi will be finalized during the opening week.",
+    "related_questions": [
+      "When does semester break begin?",
+      "When does the college reopen?",
+      "When are semester exams?"
+    ]
+  },
+  {
+    "id": "faq_25",
+    "category": "Timings",
+    "question": "What are the morning break timings?",
+    "patterns": [
+      "What are the morning break timings?",
+      "Morning tea break timing",
+      "When is short recess?",
+      "Break between period 2 and 3",
+      "Morning interval time",
+      "Tea break timing"
+    ],
+    "answer": "The morning recess (Tea Break) is from **11:00 AM to 11:15 AM** (15 minutes). Period 3 begins promptly at 11:15 AM.",
+    "related_questions": [
+      "What is the lunch break timing?",
+      "What time does the first class begin?",
+      "Which subject is scheduled in the third period?"
+    ]
+  },
+  {
+    "id": "faq_26",
+    "category": "Timeline",
+    "question": "How many days until semester exams?",
+    "patterns": [
+      "How many days until semester exams?",
+      "Days remaining for semester exams",
+      "How much time left for final exams?",
+      "Semester exam countdown",
+      "How many days until university exams?"
+    ],
+    "dynamic_handler": "days_until_sem_exam",
+    "answer": "There are approximately **25 days remaining** until the End Semester University Theory Examinations begin on **2 November 2026**. Make sure you prepare your study schedule and consult your faculty mentors!",
+    "related_questions": [
+      "When is study holiday?",
+      "When are practical exams?",
+      "When is the next academic event?"
+    ]
+  },
+  {
+    "id": "faq_27",
+    "category": "Academic Policies",
+    "question": "What is the attendance requirement for appearing in examinations?",
+    "patterns": [
+      "What is the attendance requirement for appearing in examinations?",
+      "Minimum attendance required",
+      "Attendance percentage for exams",
+      "How much attendance is needed to write exams?",
+      "Attendance criteria",
+      "What if my attendance is below 75%?"
+    ],
+    "answer": "As per University regulations:\n• A minimum aggregate attendance of **75%** across all theory and practical courses is strictly mandatory to receive exam hall tickets.\n• Condonation of shortage (between 65% and 74%) is granted only on valid certified medical grounds upon approval by the Dean.",
+    "related_questions": [
+      "When is the last working day?",
+      "When are semester exams?",
+      "When are internal exams?"
+    ]
+  },
+  {
+    "id": "faq_28",
+    "category": "Timetable",
+    "question": "Are laboratory sessions conducted on Saturday?",
+    "patterns": [
+      "Are laboratory sessions conducted on Saturday?",
+      "Do we have labs on Saturdays?",
+      "Are labs open on weekends?",
+      "Saturday lab sessions",
+      "Can we access computing labs on Saturday?"
+    ],
+    "answer": "On designated working Saturdays (1st & 3rd of each month), specialized simulation labs and remedial coding sessions run from 10:00 AM to 12:15 PM. Non-working Saturdays permit research scholars and project batches with prior HOD permission.",
+    "related_questions": [
+      "Is Saturday a working day?",
+      "When is the next working Saturday?",
+      "What is today's timetable?"
+    ]
+  },
+  {
+    "id": "faq_29",
+    "category": "Conflict Detector",
+    "question": "How to check for timetable conflicts?",
+    "patterns": [
+      "How to check for timetable conflicts?",
+      "Check schedule conflict",
+      "Are there overlapping classes?",
+      "Detect timetable collision",
+      "Verify timetable conflicts",
+      "Schedule conflict detector"
+    ],
+    "dynamic_handler": "detect_conflicts",
+    "answer": "You can verify schedule integrity using our **Smart Timetable Conflict Detector** in the sidebar or by asking me! The detector analyzes start and end minutes for all scheduled periods to ensure no subject or lab overlaps in the same section or room.",
+    "related_questions": [
+      "Is there any timetable change today?",
+      "What is today's timetable?",
+      "Which subject is scheduled in the third period?"
+    ]
+  },
+  {
+    "id": "faq_30",
+    "category": "Academic Policies",
+    "question": "How can I switch my semester or section?",
+    "patterns": [
+      "How can I switch my semester or section?",
+      "Change section",
+      "Switch to semester 1",
+      "Select section B",
+      "Change semester in chatbot",
+      "How does personalization work?"
+    ],
+    "answer": "Use the **Semester & Section dropdown selectors** located at the top-left of the application header. Selecting **Semester 1–4** and **Section A/B** instantly personalizes your timetable, today's schedule widget, and all AI assistant queries!",
+    "related_questions": [
+      "What is today's timetable?",
+      "What classes do I have tomorrow?",
+      "How to check for timetable conflicts?"
+    ]
+  },
+  {
+    "id": "faq_31",
+    "category": "Timings",
+    "question": "What are the total college working hours?",
+    "patterns": [
+      "What are the total college working hours?",
+      "College hours",
+      "Working hours",
+      "What time is college open?",
+      "Daily working duration"
+    ],
+    "answer": "The college academic schedule runs from **09:00 AM to 04:00 PM**, comprising six 60-minute instructional periods, one 15-minute morning tea recess, and a 45-minute lunch break.",
+    "related_questions": [
+      "What time does the first class begin?",
+      "When does the last class end?",
+      "What is the lunch break timing?"
+    ]
+  },
+  {
+    "id": "faq_32",
+    "category": "Exams",
+    "question": "Where can I find the semester examination schedule?",
+    "patterns": [
+      "Where can I find the semester examination schedule?",
+      "Examination timetable publication",
+      "Where is the date sheet posted?",
+      "Exam time table notice",
+      "Date sheet for final exams"
+    ],
+    "answer": "The official semester examination date sheet is published on the University Examination Portal and displayed on the Department Notice Board 15 days before exams commence. End Semester theory exams start **2 November 2026**.",
+    "related_questions": [
+      "When are semester exams?",
+      "How many days until semester exams?",
+      "When is study holiday?"
+    ]
+  }
+]

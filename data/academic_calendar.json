@@ -1,0 +1,129 @@
+{
+  "academic_year": "2026-2027",
+  "semester_cycle": "Odd Semester (Autumn)",
+  "semester_commencement": "2026-08-10",
+  "events": [
+    {
+      "id": "evt_01",
+      "name": "Commencement of Classes",
+      "date": "2026-08-10",
+      "category": "Academic",
+      "type": "milestone",
+      "description": "Orientation and start of odd semester academic coursework for all MCA batches."
+    },
+    {
+      "id": "evt_02",
+      "name": "Internal Assessment Test I (IAT-1)",
+      "date": "2026-09-07",
+      "category": "Examination",
+      "type": "exam",
+      "description": "First mid-term internal evaluation covering Units 1 & 2."
+    },
+    {
+      "id": "evt_03",
+      "name": "Gandhi Jayanti (Holiday)",
+      "date": "2026-10-02",
+      "category": "Holiday",
+      "type": "holiday",
+      "description": "National Holiday - College closed."
+    },
+    {
+      "id": "evt_04",
+      "name": "Internal Assessment Test II (IAT-2)",
+      "date": "2026-10-12",
+      "category": "Examination",
+      "type": "exam",
+      "description": "Second continuous internal assessment covering Units 3 & 4."
+    },
+    {
+      "id": "evt_05",
+      "name": "Dussehra / Autumn Break",
+      "date": "2026-10-15",
+      "category": "Holiday",
+      "type": "holiday",
+      "description": "Institutional holiday on account of Dussehra celebrations."
+    },
+    {
+      "id": "evt_06",
+      "name": "Compensatory Working Saturday",
+      "date": "2026-10-17",
+      "category": "Working Day",
+      "type": "working_saturday",
+      "description": "3rd Saturday working day following Tuesday's timetable schedule."
+    },
+    {
+      "id": "evt_07",
+      "name": "MCA TechSymposium & Project Expo",
+      "date": "2026-10-19",
+      "category": "Event",
+      "type": "event",
+      "description": "Annual Department technical fest featuring paper presentations and code hackathon."
+    },
+    {
+      "id": "evt_08",
+      "name": "End Semester Practical & Lab Examinations",
+      "date": "2026-10-20",
+      "category": "Examination",
+      "type": "practical",
+      "description": "Hands-on lab evaluations, viva-voce, and code execution assessments."
+    },
+    {
+      "id": "evt_09",
+      "name": "Last Working Day",
+      "date": "2026-10-24",
+      "category": "Academic",
+      "type": "milestone",
+      "description": "Official conclusion of odd semester classroom teaching and attendance freezing."
+    },
+    {
+      "id": "evt_10",
+      "name": "Preparatory Study Holidays",
+      "date": "2026-10-25",
+      "category": "Academic",
+      "type": "study_holiday",
+      "description": "Preparatory break for students before theory university examinations begin."
+    },
+    {
+      "id": "evt_11",
+      "name": "End Semester University Theory Examinations",
+      "date": "2026-11-02",
+      "category": "Examination",
+      "type": "exam",
+      "description": "Terminal semester written examinations across all core and elective subjects."
+    },
+    {
+      "id": "evt_12",
+      "name": "Semester Theory Examinations Conclude",
+      "date": "2026-11-18",
+      "category": "Examination",
+      "type": "milestone",
+      "description": "Completion of all odd semester written examinations."
+    },
+    {
+      "id": "evt_13",
+      "name": "Semester Break / Vacation",
+      "date": "2026-11-19",
+      "category": "Holiday",
+      "type": "holiday",
+      "description": "Term break for students and faculty."
+    },
+    {
+      "id": "evt_14",
+      "name": "College Reopening for Even Semester",
+      "date": "2026-12-01",
+      "category": "Academic",
+      "type": "milestone",
+      "description": "Commencement of Even Semester (Spring 2027) classes and registration."
+    }
+  ],
+  "rules": {
+    "regular_working_days": "Monday to Friday",
+    "college_hours": "09:00 AM – 04:00 PM",
+    "working_saturdays": "1st and 3rd Saturdays of every month (following assigned weekday timetables)",
+    "off_saturdays": "2nd and 4th Saturdays are non-working holidays",
+    "sundays": "Non-working holidays",
+    "attendance_minimum": "Minimum 75% aggregate attendance is mandatory to appear for semester examinations",
+    "tea_break": "11:00 AM – 11:15 AM (15 minutes)",
+    "lunch_break": "12:15 PM – 01:00 PM (45 minutes)"
+  }
+}

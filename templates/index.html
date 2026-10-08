@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Compass — College FAQ Chatbot & Timetable Assistant</title>
+    
+    <!-- Google Fonts: Playfair Display (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- ==============================================
+             LEFT SIDEBAR
+             ============================================== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <!-- Elegant Academic Compass SVG Icon -->
+                    <div class="logo-icon-wrapper">
+                        <svg class="compass-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="#C49A45"></polygon>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="brand-title">Academic Compass</h1>
+                        <span class="brand-tagline">AI Schedule Assistant</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personalization Context Selector -->
+            <div class="sidebar-personalization">
+                <div class="section-label">STUDENT PROFILE</div>
+                <div class="selector-card">
+                    <div class="selector-group">
+                        <label for="semesterSelect">Semester</label>
+                        <select id="semesterSelect" class="styled-select">
+                            <option value="1">Semester 1 (MCA)</option>
+                            <option value="2" selected>Semester 2 (MCA)</option>
+                            <option value="3">Semester 3 (MCA)</option>
+                            <option value="4">Semester 4 (MCA)</option>
+                        </select>
+                    </div>
+                    <div class="selector-group">
+                        <label for="sectionSelect">Section</label>
+                        <select id="sectionSelect" class="styled-select">
+                            <option value="A" selected>Section A</option>
+                            <option value="B">Section B</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="active-badge" id="sidebarContextBadge">
+                    <span class="badge-dot"></span>
+                    <span id="sidebarContextText">Semester 2 • Section A</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="sidebar-nav">
+                <div class="section-label">MENU</div>
+                <button class="nav-item active" data-view="chat-view">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </span>
+                    <span class="nav-label">Ask Assistant</span>
+                </button>
+                <button class="nav-item" data-view="schedule-view">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </span>
+                    <span class="nav-label">Today's Schedule</span>
+                </button>
+                <button class="nav-item" data-view="calendar-view">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </span>
+                    <span class="nav-label">Academic Calendar</span>
+                </button>
+                <button class="nav-item" data-view="timeline-view">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </span>
+                    <span class="nav-label">What's Next? (Timeline)</span>
+                </button>
+                <button class="nav-item" data-view="conflict-view">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </span>
+                    <span class="nav-label">Conflict Detector</span>
+                </button>
+                <button class="nav-item" data-view="viva-view">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </span>
+                    <span class="nav-label">Viva & AI Guide</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="academic-note">
+                    <span class="note-icon">ℹ</span>
+                    <span>Demo academic data used for project purposes.</span>
+                </div>
+                <div class="footer-meta">MCA AI Practical • NLP Project</div>
+            </div>
+        </aside>
+
+        <!-- ==============================================
+             MAIN CONTENT WRAPPER
+             ============================================== -->
+        <main class="main-wrapper">
+            <!-- Top Dashboard Header with Stats -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                    <div class="header-titles">
+                        <h2 class="view-title" id="currentViewTitle">Academic Compass</h2>
+                        <span class="view-subtitle" id="currentViewSubtitle">Your timetable and academic calendar assistant</span>
+                    </div>
+                </div>
+
+                <!-- Top Mini Stats Cards -->
+                <div class="stats-ribbon">
+                    <div class="stat-card">
+                        <span class="stat-label">Next Class</span>
+                        <span class="stat-value" id="statNextClass">10:00 AM</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Next Holiday</span>
+                        <span class="stat-value" id="statNextHoliday">15 October</span>
+                    </div>
+                    <div class="stat-card highlight">
+                        <span class="stat-label">Semester Exam</span>
+                        <span class="stat-value" id="statSemExam">25 Days</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Classes Today</span>
+                        <span class="stat-value" id="statClassesToday">5</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="context-pill" id="topContextPill">
+                        <span class="pill-dot"></span>
+                        <span id="topContextText">Semester 2 • Section A</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ==============================================
+                 VIEW 1: ASK ASSISTANT (CHAT VIEW)
+                 ============================================== -->
+            <section class="content-view active" id="chat-view">
+                <div class="chat-container">
+                    <div class="chat-messages-area" id="chatMessages">
+                        <!-- Welcome Screen (Visible on initialization) -->
+                        <div class="welcome-screen" id="welcomeScreen">
+                            <div class="welcome-avatar">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="#C49A45"></polygon>
+                                </svg>
+                            </div>
+                            <h2 class="welcome-heading">Good Morning 👋</h2>
+                            <p class="welcome-subtext">What would you like to know about your academic schedule?</p>
+                            
+                            <!-- Quick Action Cards -->
+                            <div class="quick-actions-grid">
+                                <button class="action-card" data-query="What is today's timetable?">
+                                    <div class="action-icon">📅</div>
+                                    <div class="action-content">
+                                        <span class="action-title">Today’s Classes</span>
+                                        <span class="action-desc">Check periods, timings & rooms</span>
+                                    </div>
+                                </button>
+                                <button class="action-card" data-query="What classes do I have tomorrow?">
+                                    <div class="action-icon">🕒</div>
+                                    <div class="action-content">
+                                        <span class="action-title">Tomorrow’s Timetable</span>
+                                        <span class="action-desc">Preview tomorrow's lectures & labs</span>
+                                    </div>
+                                </button>
+                                <button class="action-card" data-query="When is the next holiday?">
+                                    <div class="action-icon">🏖️</div>
+                                    <div class="action-content">
+                                        <span class="action-title">Next Holiday</span>
+                                        <span class="action-desc">Upcoming breaks & long weekends</span>
+                                    </div>
+                                </button>
+                                <button class="action-card" data-query="When are internal exams?">
+                                    <div class="action-icon">📝</div>
+                                    <div class="action-content">
+                                        <span class="action-title">Upcoming Exams</span>
+                                        <span class="action-desc">IAT-2 & Semester exam dates</span>
+                                    </div>
+                                </button>
+                                <button class="action-card" data-query="What is the academic calendar?">
+                                    <div class="action-icon">🗓️</div>
+                                    <div class="action-content">
+                                        <span class="action-title">Academic Calendar</span>
+                                        <span class="action-desc">Key milestones & semester term dates</span>
+                                    </div>
+                                </button>
+                                <button class="action-card" data-query="What are this month's important dates?">
+                                    <div class="action-icon">⭐</div>
+                                    <div class="action-content">
+                                        <span class="action-title">Important Dates</span>
+                                        <span class="action-desc">Symposiums, practicals & deadlines</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Typing Indicator -->
+                    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                        <span class="typing-dot"></span>
+                        <span class="typing-dot"></span>
+                        <span class="typing-dot"></span>
+                        <span class="typing-text">Academic Compass is formulating answer...</span>
+                    </div>
+
+                    <!-- Chat Input Area -->
+                    <div class="chat-input-wrapper">
+                        <form class="chat-form" id="chatForm">
+                            <input 
+                                type="text" 
+                                id="chatInput" 
+                                class="chat-input" 
+                                placeholder="Ask about timetable, holidays, examinations, break timings..." 
+                                autocomplete="off"
+                            >
+                            <button type="submit" class="send-btn" id="sendBtn" title="Send Question">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="input-helper-bar">
+                            <span class="helper-text">NLP Matcher: TF-IDF & Cosine Similarity</span>
+                            <span class="helper-divider">•</span>
+                            <button class="helper-link" id="btnInspectLast">Inspect Last Query</button>
+                            <span class="helper-divider">•</span>
+                            <button class="helper-link" id="btnTestConflictQuery">Test Conflict Query</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 VIEW 2: TODAY'S SCHEDULE (TIMETABLE WIDGET)
+                 ============================================== -->
+            <section class="content-view" id="schedule-view">
+                <div class="view-panel-container">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-heading">Daily Class Timetable</h3>
+                            <p class="panel-subtext" id="scheduleSubtext">Displaying schedule for Semester 2 • Section A</p>
+                        </div>
+                        <!-- Day Selection Tabs -->
+                        <div class="day-tabs" id="dayTabs">
+                            <button class="day-tab" data-day="Monday">Mon</button>
+                            <button class="day-tab" data-day="Tuesday">Tue</button>
+                            <button class="day-tab" data-day="Wednesday">Wed</button>
+                            <button class="day-tab" data-day="Thursday">Thu</button>
+                            <button class="day-tab" data-day="Friday">Fri</button>
+                            <button class="day-tab" data-day="Saturday">Sat</button>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Cards List -->
+                    <div class="schedule-timeline" id="scheduleTimeline">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 VIEW 3: ACADEMIC CALENDAR VIEW
+                 ============================================== -->
+            <section class="content-view" id="calendar-view">
+                <div class="view-panel-container">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-heading">Official Academic Calendar</h3>
+                            <p class="panel-subtext">Odd Semester 2026-2027 • Approved Milestones & Examination Schedule</p>
+                        </div>
+                        <div class="calendar-legend">
+                            <span class="legend-item"><span class="legend-dot exam"></span> Examinations</span>
+                            <span class="legend-item"><span class="legend-dot holiday"></span> Holidays</span>
+                            <span class="legend-item"><span class="legend-dot practical"></span> Practicals</span>
+                            <span class="legend-item"><span class="legend-dot working"></span> Working Saturday</span>
+                            <span class="legend-item"><span class="legend-dot milestone"></span> Milestones</span>
+                        </div>
+                    </div>
+
+                    <div class="calendar-content-grid">
+                        <!-- Interactive Month Viewer -->
+                        <div class="calendar-grid-card">
+                            <div class="month-selector-bar">
+                                <h4 class="calendar-month-title" id="calendarMonthTitle">October 2026</h4>
+                                <div class="month-nav-btns">
+                                    <button class="month-btn" id="prevMonthBtn">&larr;</button>
+                                    <button class="month-btn" id="nextMonthBtn">&rarr;</button>
+                                </div>
+                            </div>
+                            <div class="calendar-weekdays-row">
+                                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                            </div>
+                            <div class="calendar-days-grid" id="calendarDaysGrid">
+                                <!-- Days rendered dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Calendar Key Dates Listing -->
+                        <div class="calendar-events-card">
+                            <h4 class="card-inner-title">Key Academic Milestones</h4>
+                            <div class="events-list" id="calendarEventsList">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 VIEW 4: WHAT'S NEXT? (ACADEMIC TIMELINE)
+                 ============================================== -->
+            <section class="content-view" id="timeline-view">
+                <div class="view-panel-container">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-heading">“What’s Next?” Academic Timeline</h3>
+                            <p class="panel-subtext">Dynamic countdown calculated via Python datetime engine</p>
+                        </div>
+                        <div class="anchor-date-badge">
+                            <span>Reference Date: <strong id="referenceDateLabel">08 October 2026</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Countdown Badges -->
+                    <div class="countdown-hero-grid" id="countdownHeroGrid">
+                        <!-- Populated dynamically -->
+                    </div>
+
+                    <!-- Vertical Milestone Timeline -->
+                    <div class="timeline-stream-container">
+                        <h4 class="card-inner-title">Chronological Event Stream</h4>
+                        <div class="milestone-stream" id="milestoneStream">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 VIEW 5: SMART TIMETABLE CONFLICT DETECTOR
+                 ============================================== -->
+            <section class="content-view" id="conflict-view">
+                <div class="view-panel-container">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-heading">Smart Timetable Conflict Detector</h3>
+                            <p class="panel-subtext">Algorithmic schedule collision analysis using interval overlap validation</p>
+                        </div>
+                        <div class="conflict-actions">
+                            <button class="btn-secondary" id="btnRunMasterCheck">Scan Master Timetable</button>
+                            <button class="btn-primary" id="btnSimulateConflict">Run Overlap Simulation</button>
+                        </div>
+                    </div>
+
+                    <!-- Alert Output Box -->
+                    <div class="conflict-result-area" id="conflictResultArea">
+                        <div class="status-card-clean">
+                            <div class="status-icon-clean">✓</div>
+                            <div class="status-text-clean">
+                                <h4>Timetable Status: Valid & Conflict-Free</h4>
+                                <p>No interval collisions detected for the active section timetable.</p>
+                                <span class="test-hint">Click <strong>"Run Overlap Simulation"</strong> to see how the system detects an overlapping class collision.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conflict Detection Logic Explanation -->
+                    <div class="conflict-explanation-card">
+                        <h4 class="card-inner-title">How Conflict Detection Works (For Viva)</h4>
+                        <div class="code-concept-box">
+                            <p>For any two scheduled courses <code>S₁</code> and <code>S₂</code> within the same section and weekday:</p>
+                            <div class="math-formula-box">
+                                Collision Condition: <code>Start(S₁) &lt; End(S₂)</code> AND <code>Start(S₂) &lt; End(S₁)</code>
+                            </div>
+                            <p>Overlap Window: <code>max(Start(S₁), Start(S₂))</code> to <code>min(End(S₁), End(S₂))</code></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 VIEW 6: VIVA & AI GUIDE
+                 ============================================== -->
+            <section class="content-view" id="viva-view">
+                <div class="view-panel-container">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-heading">Viva & AI Methodology Guide</h3>
+                            <p class="panel-subtext">Comprehensive explanation of NLP concepts, mathematical formulas, and system architecture</p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive NLP Inspector for Viva -->
+                    <div class="viva-debugger-card">
+                        <h4 class="card-inner-title">🔍 Live NLP Query Inspector (Viva Demonstration)</h4>
+                        <p class="card-desc">Type any user question below to inspect its TF-IDF feature weights, extracted vocabulary tokens, and cosine similarities against all stored FAQs.</p>
+                        <div class="debugger-input-row">
+                            <input type="text" id="debuggerInput" class="chat-input" placeholder="e.g. When are semester exams?" value="When are semester exams?">
+                            <button class="btn-primary" id="btnRunDebugger">Inspect NLP Match</button>
+                        </div>
+                        <div class="debugger-output" id="debuggerOutput" style="display: none;">
+                            <!-- Populated on click -->
+                        </div>
+                    </div>
+
+                    <!-- Core Viva Concepts Cards -->
+                    <div class="viva-cards-grid">
+                        <div class="viva-card">
+                            <span class="viva-tag">Concept 1</span>
+                            <h4>What is NLP?</h4>
+                            <p><strong>Natural Language Processing (NLP)</strong> is a subfield of Artificial Intelligence enabling computers to understand, interpret, and process human language text. In this chatbot, NLP maps free-text student questions to pre-curated FAQ intents.</p>
+                        </div>
+                        <div class="viva-card">
+                            <span class="viva-tag">Concept 2</span>
+                            <h4>What is TF-IDF?</h4>
+                            <p><strong>Term Frequency - Inverse Document Frequency</strong> evaluates how important a word is to a document relative to the corpus.</p>
+                            <div class="viva-formula">
+                                TF(t, d) = count(t, d) / total_words(d)<br>
+                                IDF(t) = ln((1 + N) / (1 + df(t))) + 1<br>
+                                TF-IDF = TF(t, d) × IDF(t)
+                            </div>
+                        </div>
+                        <div class="viva-card">
+                            <span class="viva-tag">Concept 3</span>
+                            <h4>What is Cosine Similarity?</h4>
+                            <p>It measures the angular similarity between two non-zero vectors in multi-dimensional space, regardless of document length.</p>
+                            <div class="viva-formula">
+                                Cosine Similarity(A, B) = (A · B) / (||A|| × ||B||)
+                            </div>
+                            <p>Result ranges from 0.0 (completely orthogonal/unrelated) to 1.0 (identical direction/meaning).</p>
+                        </div>
+                        <div class="viva-card">
+                            <span class="viva-tag">Concept 4</span>
+                            <h4>Confidence Threshold & Fallback</h4>
+                            <p>Our engine applies a threshold of <strong>0.25 (25%)</strong>. If the maximum cosine score falls below 0.25, the bot safely returns a polite fallback message recommending relevant topics instead of hallucinating.</p>
+                        </div>
+                        <div class="viva-card">
+                            <span class="viva-tag">Concept 5</span>
+                            <h4>Unique Features</h4>
+                            <p>• <strong>Dynamic Countdown:</strong> Uses Python <code>datetime</code> to compute days until exams and milestones.<br>
+                            • <strong>Conflict Detector:</strong> Interval intersection check prevents overlapping course slots.<br>
+                            • <strong>Personalization:</strong> Instant context switching across Semesters 1–4 and Sections A/B.</p>
+                        </div>
+                        <div class="viva-card">
+                            <span class="viva-tag">Concept 6</span>
+                            <h4>Why Not LLM / Heavy APIs?</h4>
+                            <p>TF-IDF + Cosine Similarity runs 100% locally with zero latency, zero cloud API fees, complete explainability during academic viva, and predictable deterministic answers suitable for institutional regulations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

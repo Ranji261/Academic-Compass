@@ -1,0 +1,470 @@
+{
+  "bell_schedule": [
+    { "period": 1, "start": "09:00", "end": "10:00", "type": "class", "label": "Period 1" },
+    { "period": 2, "start": "10:00", "end": "11:00", "type": "class", "label": "Period 2" },
+    { "period": "break", "start": "11:00", "end": "11:15", "type": "break", "label": "Morning Recess" },
+    { "period": 3, "start": "11:15", "end": "12:15", "type": "class", "label": "Period 3" },
+    { "period": "lunch", "start": "12:15", "end": "13:00", "type": "break", "label": "Lunch Break" },
+    { "period": 4, "start": "13:00", "end": "14:00", "type": "class", "label": "Period 4" },
+    { "period": 5, "start": "14:00", "end": "15:00", "type": "class", "label": "Period 5" },
+    { "period": 6, "start": "15:00", "end": "16:00", "type": "class", "label": "Period 6" }
+  ],
+  "semesters": {
+    "1": {
+      "name": "Semester 1 (MCA)",
+      "sections": {
+        "A": {
+          "classroom": "Hall 101, Ramanujan Block",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 101" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Ananya Sen", "room": "Hall 101" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 101" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 101" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Python Programming Lab", "code": "MCA105L", "faculty": "Prof. Ananya Sen", "room": "Computing Lab 1" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Python Programming Lab", "code": "MCA105L", "faculty": "Prof. Ananya Sen", "room": "Computing Lab 1" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 101" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 101" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Ananya Sen", "room": "Hall 101" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 101" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "DBMS Laboratory", "code": "MCA106L", "faculty": "Prof. Meera Nair", "room": "Database Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "DBMS Laboratory", "code": "MCA106L", "faculty": "Prof. Meera Nair", "room": "Database Lab" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 101" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 101" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Ananya Sen", "room": "Hall 101" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 101" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Data Structures Lab", "code": "MCA107L", "faculty": "Prof. Ananya Sen", "room": "Computing Lab 2" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Data Structures Lab", "code": "MCA107L", "faculty": "Prof. Ananya Sen", "room": "Computing Lab 2" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Ananya Sen", "room": "Hall 101" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 101" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 101" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 101" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Technical Communication", "code": "MCA108", "faculty": "Prof. David Cole", "room": "Seminar Hall A" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Library & Research Hour", "code": "LIB101", "faculty": "Department Staff", "room": "Central Library" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 101" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 101" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 101" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Ananya Sen", "room": "Hall 101" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Seminar & Viva Practice", "code": "MCA109", "faculty": "Dr. S. Raman", "room": "Hall 101" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mentorship / Tutoring", "code": "MEN101", "faculty": "Class Advisor", "room": "Hall 101" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Advanced Data Structures (Tutorial)", "code": "MCA102T", "faculty": "Prof. Ananya Sen", "room": "Hall 101" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Operating Systems (Lab)", "code": "MCA103L", "faculty": "Dr. K. V. Rao", "room": "System Lab" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Operating Systems (Lab)", "code": "MCA103L", "faculty": "Dr. K. V. Rao", "room": "System Lab" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Guest Lecture / Industry Webinar", "code": "WEB101", "faculty": "Invited Speaker", "room": "Auditorium" }
+            ]
+          }
+        },
+        "B": {
+          "classroom": "Hall 102, Ramanujan Block",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Rajiv Das", "room": "Hall 102" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 102" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 102" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 102" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Data Structures Lab", "code": "MCA107L", "faculty": "Prof. Rajiv Das", "room": "Computing Lab 3" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Data Structures Lab", "code": "MCA107L", "faculty": "Prof. Rajiv Das", "room": "Computing Lab 3" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 102" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 102" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 102" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Rajiv Das", "room": "Hall 102" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Python Programming Lab", "code": "MCA105L", "faculty": "Prof. Rajiv Das", "room": "Computing Lab 1" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Python Programming Lab", "code": "MCA105L", "faculty": "Prof. Rajiv Das", "room": "Computing Lab 1" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 102" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 102" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 102" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Rajiv Das", "room": "Hall 102" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "DBMS Laboratory", "code": "MCA106L", "faculty": "Prof. Meera Nair", "room": "Database Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "DBMS Laboratory", "code": "MCA106L", "faculty": "Prof. Meera Nair", "room": "Database Lab" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 102" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Rajiv Das", "room": "Hall 102" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 102" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 102" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Technical Communication", "code": "MCA108", "faculty": "Prof. David Cole", "room": "Seminar Hall B" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Library & Research Hour", "code": "LIB101", "faculty": "Department Staff", "room": "Central Library" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Advanced Data Structures", "code": "MCA102", "faculty": "Prof. Rajiv Das", "room": "Hall 102" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Operating Systems & Linux", "code": "MCA103", "faculty": "Dr. K. V. Rao", "room": "Hall 102" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Database Management Systems", "code": "MCA104", "faculty": "Prof. Meera Nair", "room": "Hall 102" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Mathematical Foundations", "code": "MCA101", "faculty": "Dr. S. Raman", "room": "Hall 102" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Seminar & Viva Practice", "code": "MCA109", "faculty": "Prof. Rajiv Das", "room": "Hall 102" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mentorship / Tutoring", "code": "MEN101", "faculty": "Class Advisor", "room": "Hall 102" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Operating Systems (Lab)", "code": "MCA103L", "faculty": "Dr. K. V. Rao", "room": "System Lab" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Operating Systems (Lab)", "code": "MCA103L", "faculty": "Dr. K. V. Rao", "room": "System Lab" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Advanced Data Structures (Tutorial)", "code": "MCA102T", "faculty": "Prof. Rajiv Das", "room": "Hall 102" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Guest Lecture / Industry Webinar", "code": "WEB101", "faculty": "Invited Speaker", "room": "Auditorium" }
+            ]
+          }
+        }
+      }
+    },
+    "2": {
+      "name": "Semester 2 (MCA)",
+      "sections": {
+        "A": {
+          "classroom": "Hall 201, Turing Wing",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 201" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 201" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 201" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 201" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Python Lab", "code": "MCA205L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 1" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Python Lab", "code": "MCA205L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 1" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 201" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 201" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 201" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Web Technologies", "code": "MCA206", "faculty": "Prof. R. Banerjee", "room": "Hall 201" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Web Technologies Lab", "code": "MCA207L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Web Technologies Lab", "code": "MCA207L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 201" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 201" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 201" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 201" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Machine Learning Lab", "code": "MCA208L", "faculty": "Dr. Priya Sharma", "room": "Data Lab 2" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Machine Learning Lab", "code": "MCA208L", "faculty": "Dr. Priya Sharma", "room": "Data Lab 2" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 201" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 201" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 201" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Web Technologies", "code": "MCA206", "faculty": "Prof. R. Banerjee", "room": "Hall 201" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Mini Project Phase 1", "code": "MCA209P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mini Project Phase 1", "code": "MCA209P", "faculty": "Project Committee", "room": "Project Lab" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 201" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 201" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 201" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 201" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Industry Case Studies", "code": "MCA210", "faculty": "Industry Fellow", "room": "Hall 201" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mentorship / Feedback", "code": "MEN201", "faculty": "Class Advisor", "room": "Hall 201" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "AI Special Topics (Tutorial)", "code": "MCA201T", "faculty": "Dr. Arvind Gupta", "room": "Hall 201" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Computer Networks Simulation Lab", "code": "MCA203L", "faculty": "Prof. T. Natarajan", "room": "Cisco Lab" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Computer Networks Simulation Lab", "code": "MCA203L", "faculty": "Prof. T. Natarajan", "room": "Cisco Lab" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Placement Aptitude & Soft Skills", "code": "CRT201", "faculty": "Training Cell", "room": "Auditorium" }
+            ]
+          }
+        },
+        "B": {
+          "classroom": "Hall 202, Turing Wing",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 202" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 202" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 202" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 202" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Web Technologies Lab", "code": "MCA207L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Web Technologies Lab", "code": "MCA207L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 202" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 202" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 202" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 202" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Python Lab", "code": "MCA205L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 1" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Python Lab", "code": "MCA205L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 1" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 202" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 202" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Web Technologies", "code": "MCA206", "faculty": "Prof. R. Banerjee", "room": "Hall 202" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 202" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Machine Learning Lab", "code": "MCA208L", "faculty": "Dr. Priya Sharma", "room": "Data Lab 2" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Machine Learning Lab", "code": "MCA208L", "faculty": "Dr. Priya Sharma", "room": "Data Lab 2" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 202" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 202" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Machine Learning", "code": "MCA202", "faculty": "Dr. Priya Sharma", "room": "Hall 202" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 202" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Mini Project Phase 1", "code": "MCA209P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mini Project Phase 1", "code": "MCA209P", "faculty": "Project Committee", "room": "Project Lab" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Software Engineering & Agile", "code": "MCA204", "faculty": "Prof. Sneha Verma", "room": "Hall 202" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Artificial Intelligence", "code": "MCA201", "faculty": "Dr. Arvind Gupta", "room": "Hall 202" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Computer Networks", "code": "MCA203", "faculty": "Prof. T. Natarajan", "room": "Hall 202" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Web Technologies", "code": "MCA206", "faculty": "Prof. R. Banerjee", "room": "Hall 202" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Industry Case Studies", "code": "MCA210", "faculty": "Industry Fellow", "room": "Hall 202" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mentorship / Feedback", "code": "MEN201", "faculty": "Class Advisor", "room": "Hall 202" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Computer Networks Simulation Lab", "code": "MCA203L", "faculty": "Prof. T. Natarajan", "room": "Cisco Lab" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Computer Networks Simulation Lab", "code": "MCA203L", "faculty": "Prof. T. Natarajan", "room": "Cisco Lab" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Machine Learning (Tutorial)", "code": "MCA202T", "faculty": "Dr. Priya Sharma", "room": "Hall 202" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Placement Aptitude & Soft Skills", "code": "CRT201", "faculty": "Training Cell", "room": "Auditorium" }
+            ]
+          }
+        }
+      }
+    },
+    "3": {
+      "name": "Semester 3 (MCA)",
+      "sections": {
+        "A": {
+          "classroom": "Hall 301, Hopper Tower",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 301" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 301" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 301" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 301" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Cloud Architecture Lab", "code": "MCA305L", "faculty": "Prof. Tarun K.", "room": "Cloud Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Cloud Architecture Lab", "code": "MCA305L", "faculty": "Prof. Tarun K.", "room": "Cloud Lab" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 301" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 301" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 301" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 301" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Big Data Lab", "code": "MCA306L", "faculty": "Dr. Nalini M.", "room": "Hadoop Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Big Data Lab", "code": "MCA306L", "faculty": "Dr. Nalini M.", "room": "Hadoop Lab" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 301" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 301" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 301" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 301" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Deep Learning Lab", "code": "MCA307L", "faculty": "Dr. Arvind Gupta", "room": "GPU Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Deep Learning Lab", "code": "MCA307L", "faculty": "Dr. Arvind Gupta", "room": "GPU Lab" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 301" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 301" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 301" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 301" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Major Project Work Phase I", "code": "MCA308P", "faculty": "Project Mentors", "room": "R&D Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Major Project Work Phase I", "code": "MCA308P", "faculty": "Project Mentors", "room": "R&D Lab" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 301" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 301" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 301" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 301" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Industry Hackathon Practice", "code": "MCA309", "faculty": "Tech Club", "room": "Hall 301" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mentorship & Career Advisory", "code": "MEN301", "faculty": "Class Advisor", "room": "Hall 301" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Cloud Architecture (Seminar)", "code": "MCA301T", "faculty": "Prof. Tarun K.", "room": "Hall 301" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Security Audit Workshop", "code": "MCA304W", "faculty": "Prof. Vikram Seth", "room": "Cyber Lab" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Security Audit Workshop", "code": "MCA304W", "faculty": "Prof. Vikram Seth", "room": "Cyber Lab" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Technical Paper Discussion", "code": "MCA310", "faculty": "Dr. Arvind Gupta", "room": "Hall 301" }
+            ]
+          }
+        },
+        "B": {
+          "classroom": "Hall 302, Hopper Tower",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 302" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 302" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 302" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 302" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Deep Learning Lab", "code": "MCA307L", "faculty": "Dr. Arvind Gupta", "room": "GPU Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Deep Learning Lab", "code": "MCA307L", "faculty": "Dr. Arvind Gupta", "room": "GPU Lab" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 302" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 302" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 302" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 302" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Cloud Architecture Lab", "code": "MCA305L", "faculty": "Prof. Tarun K.", "room": "Cloud Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Cloud Architecture Lab", "code": "MCA305L", "faculty": "Prof. Tarun K.", "room": "Cloud Lab" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 302" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 302" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 302" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 302" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Big Data Lab", "code": "MCA306L", "faculty": "Dr. Nalini M.", "room": "Hadoop Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Big Data Lab", "code": "MCA306L", "faculty": "Dr. Nalini M.", "room": "Hadoop Lab" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 302" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 302" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 302" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 302" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Major Project Work Phase I", "code": "MCA308P", "faculty": "Project Mentors", "room": "R&D Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Major Project Work Phase I", "code": "MCA308P", "faculty": "Project Mentors", "room": "R&D Lab" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Cyber Security & Forensics", "code": "MCA304", "faculty": "Prof. Vikram Seth", "room": "Hall 302" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Cloud Computing & DevOps", "code": "MCA301", "faculty": "Prof. Tarun K.", "room": "Hall 302" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Big Data Analytics", "code": "MCA303", "faculty": "Dr. Nalini M.", "room": "Hall 302" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Deep Learning & Neural Nets", "code": "MCA302", "faculty": "Dr. Arvind Gupta", "room": "Hall 302" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Industry Hackathon Practice", "code": "MCA309", "faculty": "Tech Club", "room": "Hall 302" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Mentorship & Career Advisory", "code": "MEN301", "faculty": "Class Advisor", "room": "Hall 302" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Security Audit Workshop", "code": "MCA304W", "faculty": "Prof. Vikram Seth", "room": "Cyber Lab" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Cloud Architecture (Seminar)", "code": "MCA301T", "faculty": "Prof. Tarun K.", "room": "Hall 302" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Security Audit Workshop", "code": "MCA304W", "faculty": "Prof. Vikram Seth", "room": "Cyber Lab" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Technical Paper Discussion", "code": "MCA310", "faculty": "Dr. Arvind Gupta", "room": "Hall 302" }
+            ]
+          }
+        }
+      }
+    },
+    "4": {
+      "name": "Semester 4 (MCA)",
+      "sections": {
+        "A": {
+          "classroom": "Hall 401, Knuth Centre",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 401" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 401" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Project Dissertation Colloquium", "code": "MCA403D", "faculty": "Prof. Meera Nair", "room": "Seminar Hall A" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Industry Internship Reviews", "code": "MCA404I", "faculty": "Dean Academics", "room": "Board Room" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Capstone Project Lab", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Capstone Project Lab", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 401" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 401" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "NLP & LLM Applications Lab", "code": "MCA406L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 2" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "NLP & LLM Applications Lab", "code": "MCA406L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 2" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Full-Stack DevOps Lab", "code": "MCA407L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Full-Stack DevOps Lab", "code": "MCA407L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 401" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 401" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Intellectual Property & Ethics", "code": "MCA408", "faculty": "Dr. S. Raman", "room": "Hall 401" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Capstone Project Work", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Capstone Project Work", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Capstone Project Work", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 401" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 401" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Project Progress Review", "code": "MCA409R", "faculty": "Evaluation Panel", "room": "Conference Hall" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Internship Mentoring", "code": "MCA404I", "faculty": "Faculty Mentors", "room": "Hall 401" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Research Paper Writing", "code": "MCA410", "faculty": "Dr. Priya Sharma", "room": "Hall 401" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Placement Drives / Industry Connect", "code": "TPO401", "faculty": "TPO Head", "room": "Auditorium" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Capstone Project Finalization", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Capstone Project Finalization", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Natural Language Processing (Review)", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 401" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Full-Stack Web (Code Review)", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 401" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Industry Guest Lecture", "code": "IND401", "faculty": "Guest CXO", "room": "Auditorium" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Graduation Advisory & Exit Viva", "code": "MEN401", "faculty": "HOD & Faculty", "room": "Hall 401" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Project Dissertation Viva Mock", "code": "MCA403D", "faculty": "Prof. Meera Nair", "room": "Seminar Hall A" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Project Dissertation Viva Mock", "code": "MCA403D", "faculty": "Prof. Meera Nair", "room": "Seminar Hall A" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Open Source Contribution Hour", "code": "OSC401", "faculty": "Open Source Lead", "room": "Computing Lab 1" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Alumni Mentorship Circle", "code": "ALU401", "faculty": "Alumni Network", "room": "Conference Hall" }
+            ]
+          }
+        },
+        "B": {
+          "classroom": "Hall 402, Knuth Centre",
+          "weekly_schedule": {
+            "Monday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 402" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 402" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Project Dissertation Colloquium", "code": "MCA403D", "faculty": "Prof. Meera Nair", "room": "Seminar Hall B" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Industry Internship Reviews", "code": "MCA404I", "faculty": "Dean Academics", "room": "Board Room" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Capstone Project Lab", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Capstone Project Lab", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" }
+            ],
+            "Tuesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 402" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 402" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Full-Stack DevOps Lab", "code": "MCA407L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Full-Stack DevOps Lab", "code": "MCA407L", "faculty": "Prof. R. Banerjee", "room": "Web Lab" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "NLP & LLM Applications Lab", "code": "MCA406L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 2" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "NLP & LLM Applications Lab", "code": "MCA406L", "faculty": "Dr. Arvind Gupta", "room": "AI Lab 2" }
+            ],
+            "Wednesday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 402" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 402" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Intellectual Property & Ethics", "code": "MCA408", "faculty": "Dr. S. Raman", "room": "Hall 402" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Capstone Project Work", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Capstone Project Work", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Capstone Project Work", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" }
+            ],
+            "Thursday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Full-Stack Web Architectures", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 402" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Natural Language Processing", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 402" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Project Progress Review", "code": "MCA409R", "faculty": "Evaluation Panel", "room": "Conference Hall" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Internship Mentoring", "code": "MCA404I", "faculty": "Faculty Mentors", "room": "Hall 402" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Research Paper Writing", "code": "MCA410", "faculty": "Dr. Priya Sharma", "room": "Hall 402" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Placement Drives / Industry Connect", "code": "TPO401", "faculty": "TPO Head", "room": "Auditorium" }
+            ],
+            "Friday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Capstone Project Finalization", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Capstone Project Finalization", "code": "MCA405P", "faculty": "Project Committee", "room": "Project Lab" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Full-Stack Web (Code Review)", "code": "MCA401", "faculty": "Prof. R. Banerjee", "room": "Hall 402" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Natural Language Processing (Review)", "code": "MCA402", "faculty": "Dr. Arvind Gupta", "room": "Hall 402" },
+              { "period": 5, "time": "14:00 - 15:00", "subject": "Industry Guest Lecture", "code": "IND401", "faculty": "Guest CXO", "room": "Auditorium" },
+              { "period": 6, "time": "15:00 - 16:00", "subject": "Graduation Advisory & Exit Viva", "code": "MEN401", "faculty": "HOD & Faculty", "room": "Hall 402" }
+            ],
+            "Saturday": [
+              { "period": 1, "time": "09:00 - 10:00", "subject": "Project Dissertation Viva Mock", "code": "MCA403D", "faculty": "Prof. Meera Nair", "room": "Seminar Hall B" },
+              { "period": 2, "time": "10:00 - 11:00", "subject": "Project Dissertation Viva Mock", "code": "MCA403D", "faculty": "Prof. Meera Nair", "room": "Seminar Hall B" },
+              { "period": 3, "time": "11:15 - 12:15", "subject": "Open Source Contribution Hour", "code": "OSC401", "faculty": "Open Source Lead", "room": "Computing Lab 1" },
+              { "period": 4, "time": "13:00 - 14:00", "subject": "Alumni Mentorship Circle", "code": "ALU401", "faculty": "Alumni Network", "room": "Conference Hall" }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "conflict_test_samples": [
+    {
+      "scenario_id": "conflict_demo_1",
+      "title": "Semester 2 - Artificial Intelligence & Data Structures Overlap",
+      "description": "Demonstrates detection of overlapping class periods on Monday morning.",
+      "day": "Monday",
+      "semester": "2",
+      "section": "A",
+      "conflicting_slots": [
+        { "subject": "Data Structures", "time": "10:00 - 11:00", "start": "10:00", "end": "11:00", "room": "Hall 101", "faculty": "Prof. Ananya Sen" },
+        { "subject": "Artificial Intelligence", "time": "10:30 - 11:30", "start": "10:30", "end": "11:30", "room": "Hall 201", "faculty": "Dr. Arvind Gupta" }
+      ],
+      "conflict_details": "Artificial Intelligence overlaps with Data Structures between 10:30 AM and 11:00 AM."
+    },
+    {
+      "scenario_id": "conflict_demo_2",
+      "title": "Room Contention Conflict",
+      "description": "Two distinct classes scheduled simultaneously in Hall 201 on Wednesday.",
+      "day": "Wednesday",
+      "semester": "2",
+      "section": "A",
+      "conflicting_slots": [
+        { "subject": "Machine Learning Lab", "time": "14:00 - 15:00", "start": "14:00", "end": "15:00", "room": "Data Lab 2", "faculty": "Dr. Priya Sharma" },
+        { "subject": "Cloud Architecture Lab", "time": "14:00 - 15:00", "start": "14:00", "end": "15:00", "room": "Data Lab 2", "faculty": "Prof. Tarun K." }
+      ],
+      "conflict_details": "Cloud Architecture Lab and Machine Learning Lab conflict for room Data Lab 2 between 02:00 PM and 03:00 PM."
+    }
+  ]
+}
